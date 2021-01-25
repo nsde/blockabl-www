@@ -1,5 +1,6 @@
 from django.shortcuts import render, HttpResponse, redirect
 from .models import Gamemode
+import os
 
 
 def index(request):
@@ -32,4 +33,8 @@ def legal(request):
 
 
 def gallery(request):
-    return render(request, "website/gallery.html")
+    photos = []
+    directory = "website/static/website/gallery"
+    for filename in os.listdir(directory):
+        photos.append(filename)
+    return render(request, "website/gallery.html", {"photos": photos})

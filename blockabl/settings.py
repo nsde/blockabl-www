@@ -23,13 +23,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '2-7bs*3x*#@+r60u(z1-6-m%ml%u4il4jweuxc0kd4!y-ub*qi'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
     "blockabl.net",
     "www.blockabl.net",
     "blockabl.herokuapp.com",
     "127.0.0.1",
+    "localhost",
 ]
 
 
